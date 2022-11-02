@@ -253,7 +253,7 @@ def boltzman(xs, temperature):
 
 
 # モデルの読み込み
-model = tf.keras.models.load_model('./model/best.h5')
+model = tf.keras.models.load_model('./api/model/best.h5')
 model.compile(loss=['categorical_crossentropy', 'mse'], optimizer='adam')
 
 # 状態の生成

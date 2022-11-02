@@ -6,7 +6,7 @@ from flask import Flask, render_template
 from flask import request
 
 app = Flask(__name__)
-model = tf.keras.models.load_model('./othello/my_model')
+model = tf.keras.models.load_model('./my_model')
 
 
 def checkPut(x, y, data):
@@ -86,5 +86,5 @@ def predict():
         return [int(np.argmax(predicted))]
 
 
-if __name__ == "__main__":
-    app.run(debug=True, port=8888, threaded=True)
+# if __name__ == "__main__":
+#     app.run(debug=True, port=8888, threaded=True)
